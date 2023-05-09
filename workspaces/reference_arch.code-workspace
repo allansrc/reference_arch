@@ -1,0 +1,61 @@
+{
+  "folders": [
+    {
+      "name": "ppix2",
+      "path": "../apps/ppix2"
+    },
+    {
+      "path": "../features/"
+    }
+  ],
+  "settings": {
+    "dart.flutterSdkPath": ".fvm/flutter_sdk",
+    // Remove .fvm files from search
+    "search.exclude": {
+      "**/.fvm": true
+    },
+    // Remove from file watching
+    "files.watcherExclude": {
+      "**/.fvm": true
+    }
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "PPIX2 Dev (Debug)",
+        "type": "dart",
+        "request": "launch",
+        "cwd": "${workspaceFolder:ppix2}",
+        "program": "lib/main.dart",
+        "args": ["--flavor", "dev", "--dart-define", "ENV_TYPE=dev"],
+        "toolArgs": [
+          "--dart-define",
+          "CRYPTOGRAPHY_KEY=r6TvBs0vQ8CUHujGElZArOL3D8lJUEyuOagGk1BmVPc="
+        ],
+        "flutterMode": "debug"
+      },
+      {
+        "name": "PPIX2 Prod (Debug)",
+        "type": "dart",
+        "request": "launch",
+        "cwd": "${workspaceFolder:ppix2}",
+        "program": "lib/main.dart",
+        "args": ["--flavor", "prod", "--dart-define", "ENV_TYPE=prod"],
+        "toolArgs": [
+          "--dart-define",
+          "CRYPTOGRAPHY_KEY=r6TvBs0vQ8CUHujGElZArOL3D8lJUEyuOagGk1BmVPc="
+        ],
+        "flutterMode": "debug"
+      },
+      {
+        "name": "Widgetbook",
+        "type": "dart",
+        "request": "launch",
+        "program": "lib/main.dart",
+        "cwd": "${fileDirname}/../gosafe/gosafe_widgetbook",
+        "flutterMode": "release"
+      }
+    ]
+  }
+}
